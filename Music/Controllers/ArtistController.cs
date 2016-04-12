@@ -47,7 +47,7 @@ namespace Music.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("IndexA");
+                return RedirectToAction("Index");
             }
         }
     }
