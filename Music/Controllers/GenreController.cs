@@ -23,8 +23,8 @@ namespace Music.Controllers
 
         public ActionResult ShowGenre(int id)
         {
-            var albums = db.Genres
-                .Include(a => a.Name)
+            var albums = db.Albums
+                .Include(a => a.Title)
                 .Where(a => a.GenreID == id);
             return View(albums.ToList());
         }
