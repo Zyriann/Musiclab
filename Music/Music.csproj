@@ -187,9 +187,8 @@
     <Content Include="Views\Albums\Edit.cshtml" />
     <Content Include="Views\Albums\Index.cshtml" />
     <Content Include="Views\Albums\ShowSomeAlbums.cshtml" />
-    <Content Include="Views\Genre\Index.cshtml" />
     <Content Include="Views\Genre\ShowGenre.cshtml" />
-    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

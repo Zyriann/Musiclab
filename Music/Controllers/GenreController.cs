@@ -17,14 +17,13 @@ namespace Music.Controllers
         // GET: Genre
         public ActionResult Index()
         {
-            var genre = db.Genres.Include(a => a.Name);
+            var genre = db.Genres.Include(a => a.GenreID);
             return View(genre.ToList());
         }
 
         public ActionResult ShowGenre(int id)
         {
             var genre = db.Genres
-                .Include(a => a.Albums)
                 .Include(a => a.Name)
                 .Where(a => a.GenreID == id);
             return View(genre.ToList());
