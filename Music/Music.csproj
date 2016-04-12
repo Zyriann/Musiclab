@@ -194,12 +194,10 @@
     <Content Include="Views\Albums\Edit.cshtml" />
     <Content Include="Views\Albums\Index.cshtml" />
     <Content Include="Views\Albums\ShowSomeAlbums.cshtml" />
-    <Content Include="Views\Artist\Index.cshtml" />
-    <Content Include="Views\Artist\ShowArtist.cshtml" />
-    <Content Include="Views\Artist\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Artist\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
