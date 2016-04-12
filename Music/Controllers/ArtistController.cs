@@ -10,27 +10,25 @@ using Music.Models;
 
 namespace Music.Controllers
 {
-    public class GenreController : Controller
+    public class ArtistController : Controller
     {
         private MusicContext db = new MusicContext();
 
-        // GET: Genre
+        // GET: Albums
         public ActionResult Index()
         {
-            var genre = db.Genres.Include(a => a.Name);
-            return View(genre.ToList());
+            var artists = db.Artists.Include(a => a.Name));
+            return View(artists.ToList());
         }
 
-        public ActionResult ShowGenre(int id)
+        public ActionResult ShowArtist(int id)
         {
-            var genre = db.Genres
-                .Include(a => a.Albums)
-                .Include(a => a.Name)
-                .Where(a => a.GenreID == id);
-            return View(genre.ToList());
+            var artist = db.Albums
+                .Include(a => a.Title)
+                .Where(a => a.ArtistID == id);
+            return View(artist.ToList());
         }
 
-        // GET: Albums/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -49,14 +47,8 @@ namespace Music.Controllers
             }
             catch (Exception)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexA");
             }
-        }
-
-        public ActionResult Create()
-        {
-            ViewBag.GenreID = new SelectList(db.Genres.OrderByDescending(g => g.Name), "GenreID", "Name");
-            return View();
         }
     }
 }
