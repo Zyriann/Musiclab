@@ -17,7 +17,7 @@ namespace Music.Controllers
         // GET: Albums
         public ActionResult Index()
         {
-            var artists = db.Artists.Include(a => a.Name));
+            var artists = db.Artists.Include(a => a.Name);
             return View(artists.ToList());
         }
 
